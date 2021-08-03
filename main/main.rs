@@ -10,38 +10,29 @@ fn main() {
     // const
     /*
     상수, immutable 변수의 차이점
-
         상수 : variable shadowing 불가능
         let a = 1;
         let a = a*a;
-
         const b: u32 = 3;
         const b: u32 = b*b; // errir[E0428]
-
-
         상수 : global scope 사용 가능
         let version = "1.0.0"; // error
         const VERSION: &'static str = "1.0.0";
-
         fn main() {
             ...
         }
-
         상수 : 타입 명시 필요
         let inch = 23.3
         const E = 2.71; // error
         const PI: f64 = 3.14;
         
-
         상수 : constant expression으로만 초기화 가능 (함수 반환값, 런타임에 결정되는 값 사용불가)
         fn plus_one(x: i32) -> i32 {
             x + 1
         }
-
         const fn plus_one_const(x:i32) -> i32 {
             x + 1
         }
-
         fn main() {
             const N1: i32 = plus_one(3); // error
             const N2: i32 = plus_one_const(3);
@@ -89,33 +80,30 @@ fn main() {
         Octal ex) 0o77
         Binary ex) 0b1111_0000
         Byte (u8 only) ex) b'A'
-
         부동 소수점
         f32 : 32bit
         f64 : 64bit
-
         Boolean
         let t = true;
         let t:bool = false;
-
         문자
         let c = 'z';
         let z = 'Z';
         let black_heart = '🖤';
     */
 
-    let tuples: (i32, f64, u8) = (500, 5.3, 1);
-    let (tuples_i32, tuples_f64, tuples_u8) = tuples;
+    // let tuples: (i32, f64, u8) = (500, 5.3, 1);
+    // let (tuples_i32, tuples_f64, tuples_u8) = tuples;
 
-    println!("tuples_f64 : {}", tuples_f64);
+    // println!("tuples_f64 : {}", tuples_f64);
 
-    // destructuring
-    let destructuring_tuples: (i32, f64, u8) = (500, 5.3, 1);
+    // // destructuring
+    // let destructuring_tuples: (i32, f64, u8) = (500, 5.3, 1);
 
-    let destructuring_tuples_i32 = destructuring_tuples.0;
-    let destructuring_tuples_f64 = destructuring_tuples.1;
-    let destructuring_tuples_u8 = destructuring_tuples.2;
-    println!("destructuring_tuples_i32 : {}", destructuring_tuples_i32);
-    println!("destructuring_tuples_f64 : {}", destructuring_tuples_f64);
-    println!("destructuring_tuples_u8 : {}", destructuring_tuples_u8);
+    // let destructuring_tuples_i32 = destructuring_tuples.0;
+    // let destructuring_tuples_f64 = destructuring_tuples.1;
+    // let destructuring_tuples_u8 = destructuring_tuples.2;
+    // println!("destructuring_tuples_i32 : {}", destructuring_tuples_i32);
+    // println!("destructuring_tuples_f64 : {}", destructuring_tuples_f64);
+    // println!("destructuring_tuples_u8 : {}", destructuring_tuples_u8);
 }
